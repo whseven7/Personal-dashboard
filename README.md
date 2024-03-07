@@ -1,4 +1,4 @@
-# React + Vite
+# Description
 
 Personal Dashboard website with 4 main features which are: Quotes of the Day widget, News widget, Weather widget, and Task Manager.
 
