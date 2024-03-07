@@ -1,0 +1,11 @@
+.container-quotes {
+  width: 75%;
+  background-color: white;
+  margin: auto;
+  padding: 1rem;
+  border-radius: 20px;
+}
+
+.quotes-box {
+  font-style: italic;
+}

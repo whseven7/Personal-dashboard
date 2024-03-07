@@ -1,0 +1,29 @@
+.jumbotron {
+  margin: 20px;
+  min-height: 570px;
+}
+
+.weather-background {
+  background-color: #0d9de3;
+}
+
+.news-background {
+  /* background-color: #CACFD6; */
+  /* background-color: #98DBC6; */
+  background-color: #E3C598;
+
+}
+
+.news-jumbotron {
+  height: 1160px;
+  overflow-y: auto;
+}
+
+.task-background {
+  background-color: #FD6767;
+}
+
+.task-jumbotron {
+  height: 570px;
+  overflow-y: auto;
+}

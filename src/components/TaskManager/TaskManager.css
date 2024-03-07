@@ -1,0 +1,83 @@
+.task-title {
+  margin: 20px;
+  font-size: 30px;
+}
+
+.task-title {
+  margin: 20px;
+  color: white;
+  font-size: 30px;
+}
+
+.TodoWrapper {
+  background: #fcbdbc;
+  padding: 2rem;
+  border-radius: 5px;
+  width: 100%;
+}
+
+.TodoForm {
+  margin-bottom: 1rem;
+  width: auto;
+}
+
+.todo-input {
+  outline: none;
+  background: none;
+  border: 2px solid #fd9698;
+  padding: 0.5rem 1rem;
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+  color: #fff;
+}
+
+.todo-input::placeholder {
+  color: grey;
+}
+
+.todo-btn {
+  background: #fd9698;
+  color: #fff;
+  border: none;
+  padding: 0.55rem;
+  cursor: pointer;
+}
+
+.Todo {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+  align-items: center;
+  background: #fd9698;
+  color: #fff;
+  padding: 0.75rem 1rem;
+  border-radius: 5px;
+  margin-bottom: 1rem;
+}
+
+.fa-trash {
+  margin-left: 0.75rem;
+}
+
+.incompleted {
+  color: #fff;
+  cursor: pointer;
+}
+
+.completed {
+  color: #c5aeff;
+  text-decoration: line-through;
+  cursor: pointer;
+}
+
+.edit-icon,
+.delete-icon {
+  cursor: pointer;
+}
+
+@media screen and (max-width: 480px) {
+  .todo-btn {
+    font-size: 12px; /* Adjust font size for smaller screens */
+  }
+}
