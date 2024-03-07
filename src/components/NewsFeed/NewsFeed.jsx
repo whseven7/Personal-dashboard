@@ -1,6 +1,5 @@
 import React from "react";
 import { useState, useEffect } from "react";
-import axios from "axios";
 import "./NewsFeed.css";
 import NewsFeedItem from "./NewsFeedItem";
 
@@ -14,11 +13,12 @@ const NewsFeed = () => {
   const [searchValue, setSearchValue] = useState("australia");
   const getArticles = async () => {
     try {
-      const response = await axios.get(
+      const response = await fetch(
         `https://newsapi.org/v2/everything?q=${searchValue}&sortBy=popularity&pageSize=5&page=1&apiKey=${news_api}`
       );
+      let data = await response.json();
       console.log(response);
-      setArticles(response.data.articles);
+      setArticles(data.articles);
     } catch (error) {
       console.error("Error fetching News data:", error);
     }
