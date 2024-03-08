@@ -2,25 +2,26 @@ import React from "react";
 import { useState, useEffect } from "react";
 import "./NewsFeed.css";
 import NewsFeedItem from "./NewsFeedItem";
+import axios from "axios";
 
 const NewsFeed = () => {
   //If you'd like to test on your local machine change use the news_api below and comment out the news_api using the env variable
 
   // const news_api = "f0b1c1a3f15e4916adb00abf15e91874";
-  const news_api = import.meta.env.REACT_APP_NEWS_API;
 
   const [articles, setArticles] = useState([]);
   const [searchValue, setSearchValue] = useState("australia");
+
   const getArticles = async () => {
     try {
-      const response = await fetch(
-        `https://newsapi.org/v2/everything?q=${searchValue}&sortBy=popularity&pageSize=5&page=1&apiKey=${news_api}`
-      );
-      let data = await response.json();
-      console.log(response);
-      setArticles(data.articles);
+      const response = await axios.get("http://localhost:3000/news", {
+        params: {
+          q: searchValue, // or any other query you want
+        },
+      });
+      setArticles(response.data);
     } catch (error) {
-      console.error("Error fetching News data:", error);
+      console.log("Error fetching News data:", error);
     }
   };
 
