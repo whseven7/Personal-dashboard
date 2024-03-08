@@ -1,1 +1,1 @@
-{ "version": 2, "rewrites": [{ "source": "/(.*)", "destination": "/src/server/server.js" }] }
+{ "version": 2, "rewrites": [{ "source": "/src/server/(.*)", "destination": "/src/server/server.js" }] }
