@@ -14,7 +14,7 @@ const NewsFeed = () => {
 
   const getArticles = async () => {
     try {
-      const response = await axios.get("http://localhost:3000/news", {
+      const response = await axios.get(import.meta.env.REACT_APP_NEWS_API_URL, {
         params: {
           q: searchValue, // or any other query you want
         },
