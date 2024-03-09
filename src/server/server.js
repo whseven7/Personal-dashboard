@@ -32,10 +32,6 @@ app.get("/news", async (req, res) => {
   }
 });
 
-app.get("/", (req, res) => {
-  res.json("Hello")
-})
-
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);
 });
