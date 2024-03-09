@@ -5,9 +5,10 @@ require('dotenv').config();
 
 
 const app = express();
-const PORT = process.env.PORT || 3000;
+app.use(cors());
+// const PORT = process.env.PORT || 3000;
 
-const NEWS_API_KEY = "f0b1c1a3f15e4916adb00abf15e91874"; 
+const NEWS_API_KEY = process.env.REACT_APP_NEWS_API; 
 
 app.use(cors());
 
@@ -31,8 +32,8 @@ app.get("/news", async (req, res) => {
   }
 });
 
-app.listen(PORT, () => {
-  console.log(`Server is running on port ${PORT}`);
-});
+// app.listen(PORT, () => {
+//   console.log(`Server is running on port ${PORT}`);
+// });
 
 module.exports = { app };
