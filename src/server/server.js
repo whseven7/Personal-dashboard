@@ -12,7 +12,7 @@ const NEWS_API_KEY = process.env.REACT_APP_NEWS_API;
 
 app.use(cors());
 
-app.get("/news", async (req, res) => {
+app.get("/api/news", async (req, res) => {
   try {
     const query = req.query.q || "help";
     const response = await axios.get("https://newsapi.org/v2/everything", {
