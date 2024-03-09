@@ -12,7 +12,11 @@ Personal Dashboard website with 4 main features which are: Quotes of the Day wid
 
 #### Notes
 
-- Uncomment the API in WeatherWidget.jsx line 24 and commented out line 25 env variable api to make the API working for the Weather Widget.
+- Uncomment the API in NewsFeed.jsx line 10 and commented out line 25 env variable api to make the API working for the Weather Widget.
+
+- In NewsFeed, follow direction on line 13 to be able to run on local machine
+
+- Uncomment the API in WeatherWidget.jsx line 24 and commented out line 11 env variable api to make the API working for the Weather Widget.
 
 ## Technologies Used
 

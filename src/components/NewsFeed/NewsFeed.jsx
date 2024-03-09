@@ -8,13 +8,17 @@ const NewsFeed = () => {
   //If you'd like to test on your local machine change use the news_api below and comment out the news_api using the env variable
 
   // const news_api = "f0b1c1a3f15e4916adb00abf15e91874";
+  const news_api = import.meta.env.REACT_APP_NEWS_API_URL
+  
+  // use "http://localhost:3000/news" to replace the import.meta.env.REACT_APP_NEWS_API_URL
+  // to run in your local machine
 
   const [articles, setArticles] = useState([]);
   const [searchValue, setSearchValue] = useState("australia");
 
   const getArticles = async () => {
     try {
-      const response = await axios.get(import.meta.env.REACT_APP_NEWS_API_URL, {
+      const response = await axios.get(news_api, {
         params: {
           q: searchValue, // or any other query you want
         },
