@@ -20,7 +20,8 @@ app.get("/news", async (req, res) => {
         q: query,
         language: "en",
         sortBy: "popularity",
-        page: 1, // Change this to the country code you want news from
+        page: 1, 
+        pageSize: 15,
         apiKey: NEWS_API_KEY,
       },
     });
