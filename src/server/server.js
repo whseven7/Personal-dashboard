@@ -6,13 +6,13 @@ require('dotenv').config();
 
 const app = express();
 app.use(cors());
-// const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 3000;
 
-const NEWS_API_KEY = process.env.REACT_APP_NEWS_API; 
+const NEWS_API_KEY = "f0b1c1a3f15e4916adb00abf15e91874"; 
 
 app.use(cors());
 
-app.get("/", async (req, res) => {
+app.get("/news", async (req, res) => {
   try {
     const query = req.query.q || "help";
     const response = await axios.get("https://newsapi.org/v2/everything", {
@@ -32,8 +32,12 @@ app.get("/", async (req, res) => {
   }
 });
 
-// app.listen(PORT, () => {
-//   console.log(`Server is running on port ${PORT}`);
-// });
+app.get("/", (req, res) => {
+  res.json("Hello")
+})
+
+app.listen(PORT, () => {
+  console.log(`Server is running on port ${PORT}`);
+});
 
 module.exports = { app };
